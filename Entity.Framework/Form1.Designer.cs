@@ -39,13 +39,14 @@
             this.lblUpdateUnitPrice = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbxAddProduct = new System.Windows.Forms.GroupBox();
-            this.lblProductName = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.tbxStockAmount = new System.Windows.Forms.TextBox();
             this.tbxProductName = new System.Windows.Forms.TextBox();
             this.lblStockAmount = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.gbxUpdateProduct.SuspendLayout();
             this.gbxAddProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -129,7 +130,7 @@
             this.gbxUpdateProduct.Controls.Add(this.lblUpdateStockAmount);
             this.gbxUpdateProduct.Controls.Add(this.lblUpdateUnitPrice);
             this.gbxUpdateProduct.Controls.Add(this.tbxUpdateUnitPrice);
-            this.gbxUpdateProduct.Location = new System.Drawing.Point(432, 244);
+            this.gbxUpdateProduct.Location = new System.Drawing.Point(432, 274);
             this.gbxUpdateProduct.Name = "gbxUpdateProduct";
             this.gbxUpdateProduct.Size = new System.Drawing.Size(343, 211);
             this.gbxUpdateProduct.TabIndex = 6;
@@ -158,27 +159,26 @@
             // gbxAddProduct
             // 
             this.gbxAddProduct.Controls.Add(this.btnAdd);
-            this.gbxAddProduct.Controls.Add(this.lblProductName);
             this.gbxAddProduct.Controls.Add(this.tbxStockAmount);
             this.gbxAddProduct.Controls.Add(this.tbxProductName);
             this.gbxAddProduct.Controls.Add(this.lblStockAmount);
             this.gbxAddProduct.Controls.Add(this.lblUnitPrice);
             this.gbxAddProduct.Controls.Add(this.tbxUnitPrice);
-            this.gbxAddProduct.Location = new System.Drawing.Point(12, 244);
+            this.gbxAddProduct.Location = new System.Drawing.Point(12, 274);
             this.gbxAddProduct.Name = "gbxAddProduct";
             this.gbxAddProduct.Size = new System.Drawing.Size(343, 211);
             this.gbxAddProduct.TabIndex = 5;
             this.gbxAddProduct.TabStop = false;
             this.gbxAddProduct.Text = "Add a product";
             // 
-            // lblProductName
+            // lblSearch
             // 
-            this.lblProductName.AutoSize = true;
-            this.lblProductName.Location = new System.Drawing.Point(28, 42);
-            this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(78, 13);
-            this.lblProductName.TabIndex = 1;
-            this.lblProductName.Text = "Product Name:";
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(429, 240);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(112, 13);
+            this.lblSearch.TabIndex = 1;
+            this.lblSearch.Text = "Search Product Name";
             // 
             // tbxStockAmount
             // 
@@ -239,12 +239,25 @@
             this.dgvProducts.TabIndex = 4;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
+            // tbxSearch
+            // 
+            this.tbxSearch.BackColor = System.Drawing.Color.Red;
+            this.tbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSearch.ForeColor = System.Drawing.Color.White;
+            this.tbxSearch.Location = new System.Drawing.Point(553, 237);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(222, 20);
+            this.tbxSearch.TabIndex = 7;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 488);
+            this.ClientSize = new System.Drawing.Size(802, 495);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.gbxUpdateProduct);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.gbxAddProduct);
             this.Controls.Add(this.dgvProducts);
             this.Name = "Form1";
@@ -256,6 +269,7 @@
             this.gbxAddProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -272,12 +286,13 @@
         private System.Windows.Forms.Label lblUpdateUnitPrice;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox gbxAddProduct;
-        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox tbxStockAmount;
         private System.Windows.Forms.TextBox tbxProductName;
         private System.Windows.Forms.Label lblStockAmount;
         private System.Windows.Forms.Label lblUnitPrice;
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.TextBox tbxSearch;
     }
 }
