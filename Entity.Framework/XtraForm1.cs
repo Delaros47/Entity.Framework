@@ -67,5 +67,10 @@ namespace Entity.Framework
             tbxUpdateUnitPrice.Text = gvProducts.GetFocusedRowCellValue("UnitPrice").ToString();
 
         }
+
+        private void tbxSearchProduct_EditValueChanged(object sender, EventArgs e)
+        {
+            gcProducts.DataSource = _productDal.GetByProductName(tbxSearchProduct.Text);
+        }
     }
 }
