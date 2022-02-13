@@ -39,14 +39,15 @@
             this.lblUpdateUnitPrice = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbxAddProduct = new System.Windows.Forms.GroupBox();
-            this.lblSearch = new System.Windows.Forms.Label();
             this.tbxStockAmount = new System.Windows.Forms.TextBox();
             this.tbxProductName = new System.Windows.Forms.TextBox();
             this.lblStockAmount = new System.Windows.Forms.Label();
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.lblAddProduct = new System.Windows.Forms.Label();
             this.gbxUpdateProduct.SuspendLayout();
             this.gbxAddProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -158,6 +159,7 @@
             // 
             // gbxAddProduct
             // 
+            this.gbxAddProduct.Controls.Add(this.lblAddProduct);
             this.gbxAddProduct.Controls.Add(this.btnAdd);
             this.gbxAddProduct.Controls.Add(this.tbxStockAmount);
             this.gbxAddProduct.Controls.Add(this.tbxProductName);
@@ -170,15 +172,6 @@
             this.gbxAddProduct.TabIndex = 5;
             this.gbxAddProduct.TabStop = false;
             this.gbxAddProduct.Text = "Add a product";
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(429, 240);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(112, 13);
-            this.lblSearch.TabIndex = 1;
-            this.lblSearch.Text = "Search Product Name";
             // 
             // tbxStockAmount
             // 
@@ -228,6 +221,15 @@
             this.tbxUnitPrice.Size = new System.Drawing.Size(183, 22);
             this.tbxUnitPrice.TabIndex = 1;
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(429, 240);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(112, 13);
+            this.lblSearch.TabIndex = 1;
+            this.lblSearch.Text = "Search Product Name";
+            // 
             // dgvProducts
             // 
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -249,6 +251,15 @@
             this.tbxSearch.Size = new System.Drawing.Size(222, 20);
             this.tbxSearch.TabIndex = 7;
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // lblAddProduct
+            // 
+            this.lblAddProduct.AutoSize = true;
+            this.lblAddProduct.Location = new System.Drawing.Point(28, 42);
+            this.lblAddProduct.Name = "lblAddProduct";
+            this.lblAddProduct.Size = new System.Drawing.Size(78, 13);
+            this.lblAddProduct.TabIndex = 4;
+            this.lblAddProduct.Text = "Product Name:";
             // 
             // Form1
             // 
@@ -294,5 +305,6 @@
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblAddProduct;
     }
 }
